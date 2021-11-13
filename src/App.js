@@ -4,13 +4,12 @@ import ListagemTarefa from './ListagemTarefa';
 import Footer from './Footer/Footer';
 import { useState } from 'react';
 function App() {
-  const [tarefas, setTarefas] = useState('');
+  const empty = ['Exemplo'];
+  const [tarefas, setTarefas] = useState(empty);
   const cadastrarTarefa = novaTarefa => {
-    setTarefas(prevState => {
-      return [novaTarefa, ...prevState];
-    });
-    tarefas.push(novaTarefa);
+    setTarefas([novaTarefa, ...tarefas]);
   };
+
   return (
     <>
       <Header />

@@ -7,13 +7,12 @@ function CadastroTarefa(props) {
   const tarefaChangeHandler = event => {
     setTarefa(event.target.value);
   };
-
   const submitHandler = event => {
     event.preventDefault();
 
-    props.onCadastroTarefa(tarefa);
+    const task = tarefa;
+    props.onCadastroTarefa(task);
     setTarefa('');
-    console.log(tarefa);
   };
 
   return (
@@ -21,12 +20,14 @@ function CadastroTarefa(props) {
       <Form onSubmit={submitHandler}>
         <Row>
           <Col>
-            <Form.Control onChange={tarefaChangeHandler} />
+            <Form.Control
+              onChange={tarefaChangeHandler}
+              value={tarefa}
+              placeholder="Digite aqui sua tarefa"
+            />
           </Col>
           <Col>
-            <Button type="submit" variant="primary">
-              Cadastrar
-            </Button>
+            <Button type="submit">Cadastrar</Button>
           </Col>
         </Row>
       </Form>
