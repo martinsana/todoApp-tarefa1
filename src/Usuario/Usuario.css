@@ -1,0 +1,14 @@
+.usuario-box {
+  position: relative;
+  display: table-caption;
+}
+
+.usuario-img {
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+.usuario-nome {
+  margin-left: 0.5rem;
+  font-size: 14px;
+}

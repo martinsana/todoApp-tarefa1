@@ -1,4 +1,9 @@
+import './Footer.css';
 function Footer() {
-  return <h1>footer</h1>;
+  return (
+    <div className="footer">
+      Aplicativo desenvolvido no curso de extensão React JS
+    </div>
+  );
 }
 export default Footer;

@@ -1,8 +1,9 @@
-import CadastroTarefa from './CadastroTarefa';
+import CadastroTarefa from './Cadastro/CadastroTarefa';
 import Header from './Header/Header';
-import ListagemTarefa from './ListagemTarefa';
+import ListagemTarefa from './Listagem/ListagemTarefa';
 import Footer from './Footer/Footer';
 import { useState } from 'react';
+import './App.css';
 function App() {
   const empty = ['Exemplo'];
   const [tarefas, setTarefas] = useState(empty);
